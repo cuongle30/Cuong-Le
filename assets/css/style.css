@@ -3,13 +3,57 @@ body {
   font-size: 18px;
   line-height: 34px;
   color: #777777;
-  background: rgb(238, 236, 236)
+  background: url('../images/background.jpg')
 }
+
+@import url('https://fonts.googleapis.com/css?family=DM+Sans:500,700&display=swap');
 
 * {
   box-sizing: border-box;
 }
 
+.nav {
+  display: inline-flex;
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  background-color: #fff;
+  padding: 0 20px;
+  border-radius: 40px;
+  box-shadow: 0 10px 40px rgba(159, 162, 177, .8);
+}
+
+.nav-item {
+  color: #83818c;
+  padding: 15px;
+  text-decoration: none;
+  transition: .3s;
+  z-index: 1;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-item:hover {
+  opacity: 1;
+  bottom: 0;
+  background-color: rgb(233, 230, 230);
+}
+
+.nav-indicator {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  transition: .4s;
+  height: 5px;
+  z-index: 1;
+  border-radius: 8px 8px 0 0;
+}
+
+@media (max-width: 580px) {
+  .nav { overflow: auto; }
+}
 /* general */
 
 .container {
@@ -24,6 +68,8 @@ h2,
 h3,
 p {
   margin-bottom: 20px;
+  font-family: 'Oswald', sans-serif;
+  color: white;
 }
 
 p:last-child {
@@ -35,7 +81,8 @@ h2,
 h3 {
   font-family: Georgia, Times, "Times New Roman", serif;
   font-weight: 700;
-  color: #4aaaa5;
+  color: white;
+  font-family: 'Fjalla One', sans-serif;
 }
 
 h1 {
@@ -169,11 +216,12 @@ h3, h2 {
 }
 
 .auth-image {
-  float: left;
   width: 200px;
   height: auto;
-  margin-top: 10px;
-  margin-right: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  display: block;
 }
 
 /* contact page */
