@@ -3,9 +3,79 @@ body {
   font-size: 18px;
   line-height: 34px;
   color: #777777;
-  background: url('../images/background.jpg')
+  background: url('../images/main2.jpeg');
+  background-size: cover;
+}
+.card {
+  text-align: center;
+}
+.flip-card {
+  background-color: transparent;
+  width: 350px;
+  height: 240px;
+  perspective: 1000px;
+  display: inline-block;
+  margin: 2%;
 }
 
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+.skill {
+  text-align: center;
+}
+.skills {
+  background: rgb(18, 24, 83);
+  align-content: center;
+  display: inline-block;
+  width: 15%;
+  height: 300px;
+  text-align: center;
+  margin: 2%;
+}
+.skills:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.1); 
+}
+.view-project {
+  color:white;
+  padding: 25px;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: .3s;
+  z-index: 1;
+  font-family: 'DM Sans', sans-serif;
+}
 @import url('https://fonts.googleapis.com/css?family=DM+Sans:500,700&display=swap');
 
 * {
@@ -50,7 +120,38 @@ body {
   z-index: 1;
   border-radius: 8px 8px 0 0;
 }
+.button {
+  background: #2980b9;
+  border-radius: 25px;
+  padding: 5px;
+}
+.portfolio {
+  color: white;
+  padding: 25px;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: .3s;
+  z-index: 1;
+  font-family: 'DM Sans', sans-serif;
+}
+.portfolio:hover{
+  color:  #2980b9;
+}
+.button:hover {
+background: white;
+}
 
+.connect:hover{
+opacity: .7;
+cursor: pointer;
+}
+
+.view-project-button {
+  background: rgb(18, 24, 83);
+  border-radius: 25px;
+  padding: 5px;
+}
 @media (max-width: 580px) {
   .nav { overflow: auto; }
 }
@@ -112,16 +213,17 @@ h3 {
 
 #logo {
   float: left;
-  width: 250px;
-  height: 90px;
+  background: url('/assets/images/icon.png');
+  width: 100px;
+  height: 100px;
   font-family: Georgia, Times, "Times New Roman", serif;
   font-size: 30px;
   font-weight: 700;
-  line-height: 90px;
+  line-height: 70px;
   color: #ffffff;
   text-align: center;
   text-decoration: none;
-  background: #4aaaa5;
+  
 }
 
 nav {
@@ -146,15 +248,15 @@ nav a:first-child {
 /* footer */
 
 footer {
-  padding: 30px 0;
+  padding-top: 20px;
   clear: both;
-  font-size: 12px;
+  font-size: 15px;
   color: #ffffff;
   color: #cccccc;
   text-align: center;
   background: #666666;
   border-top: 8px solid #4aaaa5;
-  height: 50px;
+  
 }
 
 h3, h2 {
