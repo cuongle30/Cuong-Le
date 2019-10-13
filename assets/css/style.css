@@ -76,6 +76,9 @@ body {
   z-index: 1;
   font-family: 'DM Sans', sans-serif;
 }
+.view-project-button:hover {
+  background: rgb(102, 89, 145);
+}
 @import url('https://fonts.googleapis.com/css?family=DM+Sans:500,700&display=swap');
 
 * {
